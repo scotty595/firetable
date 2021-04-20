@@ -7,7 +7,12 @@ admin.initializeApp();
 export const db = admin.firestore();
 // Initialize Auth
 export const auth = admin.auth();
+// Initialize Auth
+export const storage = admin.storage();
 
-const settings = { timestampsInSnapshots: true, ignoreUndefinedProperties: true};
+const settings = {
+  timestampsInSnapshots: true,
+  ignoreUndefinedProperties: true,
+};
 db.settings(settings);
 export const env = functions.config();
